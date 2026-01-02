@@ -31,30 +31,12 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className={`hidden lg:block fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/30 transition-transform duration-300 ${isScrolled ? "-translate-y-full" : "translate-y-0"}`}>
-        <div className="container mx-auto px-6 py-2 flex justify-between items-center text-sm">
-          <div className="flex items-center gap-6 text-muted-foreground">
-            <a href="tel:+919725724010" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Phone className="w-3 h-3" />
-              <span>+91-9725724010</span>
-            </a>
-            <a href="mailto:thetechknowautomation@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Mail className="w-3 h-3" />
-              <span>thetechknowautomation@gmail.com</span>
-            </a>
-          </div>
-          <div className="text-muted-foreground">
-            <span>Est. 2018 | Vadodara, Gujarat</span>
-          </div>
-        </div>
-      </div>
 
       {/* Main Navigation */}
       <nav
         className={`fixed left-0 right-0 z-40 transition-all duration-500 ${isScrolled
-          ? "top-0 lg:top-0 bg-background/95 backdrop-blur-xl border-b border-border/30 py-3"
-          : "top-0 lg:top-9 bg-background/80 backdrop-blur-md py-6"
+          ? "top-0 bg-background/95 backdrop-blur-xl border-b border-border/30 py-3"
+          : "top-0 bg-background/80 backdrop-blur-md py-6"
           }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
