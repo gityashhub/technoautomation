@@ -90,7 +90,7 @@ const Services = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-32">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-24 sm:pt-32">
         <div
           className="absolute inset-0 transition-all duration-700"
           style={{
@@ -102,15 +102,15 @@ const Services = () => {
         <div className="image-overlay-strong" />
         <div className="absolute inset-0 bg-gradient-radial-primary opacity-40" />
 
-        <div className="relative container mx-auto px-6 py-20">
+        <div className="relative container mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <div className="max-w-4xl">
-            <p className="text-primary tracking-[0.4em] uppercase text-sm mb-6 animate-fade-up opacity-0-initial font-body">
+            <p className="text-primary tracking-[0.3em] sm:tracking-[0.4em] uppercase text-xs sm:text-sm mb-4 sm:mb-6 animate-fade-up opacity-0-initial font-body">
               Our Services
             </p>
             <h1 className="text-display-xl animate-fade-up opacity-0-initial delay-100">
               WHAT WE OFFER
             </h1>
-            <p className="mt-6 text-xl text-foreground/70 max-w-2xl animate-fade-up opacity-0-initial delay-200 font-body font-light">
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-foreground/70 max-w-2xl animate-fade-up opacity-0-initial delay-200 font-body font-light">
               Comprehensive automation, audio-visual, and security services for modern living
             </p>
           </div>
@@ -120,14 +120,14 @@ const Services = () => {
       </section>
 
       {/* Category Navigation */}
-      <section className="sticky top-16 lg:top-24 z-20 bg-background/95 backdrop-blur-xl border-y border-border/30 py-4">
-        <div className="container mx-auto px-6">
+      <section className="sticky top-16 lg:top-20 z-20 bg-background/95 backdrop-blur-xl border-y border-border/30 py-3 sm:py-4">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="flex overflow-x-auto gap-2 md:gap-4 pb-2 scrollbar-hide">
             {solutionCategories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`flex-shrink-0 px-4 md:px-6 py-3 font-display text-sm md:text-base tracking-wider transition-all duration-300 hover:scale-105 active:scale-95 ${activeCategory === category.id
+                className={`flex-shrink-0 px-3 sm:px-4 md:px-6 py-2 sm:py-3 font-display text-xs sm:text-sm md:text-base tracking-wider transition-all duration-300 hover:scale-105 active:scale-95 whitespace-nowrap ${activeCategory === category.id
                   ? "bg-primary text-primary-foreground shadow-glow"
                   : "bg-secondary text-foreground hover:bg-secondary/80"
                   }`}

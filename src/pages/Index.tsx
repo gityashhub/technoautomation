@@ -105,37 +105,37 @@ const Index = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative h-full container mx-auto px-6 flex flex-col justify-center items-center text-center">
-          <div className="max-w-5xl">
+        <div className="relative h-full container mx-auto px-4 sm:px-6 flex flex-col justify-center items-center text-center">
+          <div className="max-w-5xl w-full">
             {/* Accent Line */}
-            <div className="flex justify-center mb-8 animate-fade-up opacity-0-initial">
+            <div className="flex justify-center mb-6 sm:mb-8 animate-fade-up opacity-0-initial">
               <div className="accent-line" />
             </div>
 
             {/* Tagline */}
-            <p className="bg-primary text-white px-3 py-1 inline-block tracking-[0.4em] uppercase text-sm mb-6 animate-fade-up opacity-0-initial delay-100 font-body font-bold">
+            <p className="bg-primary text-white px-3 py-1 inline-block tracking-[0.3em] sm:tracking-[0.4em] uppercase text-xs sm:text-sm mb-4 sm:mb-6 animate-fade-up opacity-0-initial delay-100 font-body font-bold">
               We Automate
             </p>
 
             {/* Main Heading */}
-            <h1 className="text-display-xl animate-fade-up opacity-0-initial delay-200">
+            <h1 className="text-display-xl animate-fade-up opacity-0-initial delay-200 px-4">
               YOUR HOME
             </h1>
 
             {/* Subheading */}
-            <p className="mt-6 text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto animate-fade-up opacity-0-initial delay-300 font-body font-light">
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto animate-fade-up opacity-0-initial delay-300 font-body font-light px-4">
               Luxury Automation • Audio Visual • Security • Smart Living
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up opacity-0-initial delay-400">
-              <Button variant="hero" size="xl" asChild>
+            <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 animate-fade-up opacity-0-initial delay-400 px-4">
+              <Button variant="hero" size="xl" asChild className="w-full sm:w-auto">
                 <Link to="/services">
                   Explore Services
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
-              <Button variant="heroOutline" size="xl" asChild>
+              <Button variant="heroOutline" size="xl" asChild className="w-full sm:w-auto">
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
@@ -152,19 +152,19 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-20 bg-card border-y border-border/30">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="relative py-12 sm:py-16 md:py-20 bg-card border-y border-border/30">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div
                 key={stat.label}
                 className="text-center animate-fade-up opacity-0-initial hover-lift cursor-default"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <p className="font-display text-4xl md:text-5xl text-primary text-glow">
+                <p className="font-display text-3xl sm:text-4xl md:text-5xl text-primary text-glow">
                   {stat.value}
                 </p>
-                <p className="mt-2 text-muted-foreground text-sm tracking-wider uppercase">
+                <p className="mt-2 text-muted-foreground text-xs sm:text-sm tracking-wider uppercase">
                   {stat.label}
                 </p>
               </div>

@@ -61,7 +61,7 @@
     --glass: 0 0% 100% / 0.05;
     --glass-border: 0 0% 100% / 0.1;
     --glass-strong: 0 0% 100% / 0.08;
-    
+
     /* Gradients */
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 6%) 0%, hsl(0 0% 3%) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(350 70% 35%) 0%, hsl(350 80% 25%) 100%);
@@ -92,13 +92,19 @@
     font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     letter-spacing: 0.05em;
   }
 }
 
 @layer components {
+
   /* Glassmorphism Card */
   .glass-card {
     @apply relative overflow-hidden rounded-2xl;
@@ -147,17 +153,17 @@
 
   .text-display-xl {
     font-family: var(--font-display);
-    @apply text-6xl md:text-8xl lg:text-9xl tracking-wider leading-none;
+    @apply text-5xl sm:text-6xl md:text-8xl lg:text-9xl tracking-wider leading-none;
   }
 
   .text-display-lg {
     font-family: var(--font-display);
-    @apply text-4xl md:text-6xl lg:text-7xl tracking-wider leading-tight;
+    @apply text-3xl sm:text-4xl md:text-6xl lg:text-7xl tracking-wider leading-tight;
   }
 
   .text-display-md {
     font-family: var(--font-display);
-    @apply text-3xl md:text-4xl lg:text-5xl tracking-wider;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wider;
   }
 
   /* Vertical Text */
@@ -197,6 +203,7 @@
 }
 
 @layer utilities {
+
   /* Animation Utilities */
   .animate-fade-up {
     animation: fadeUp 0.8s ease-out forwards;
@@ -223,14 +230,37 @@
   }
 
   /* Animation Delays */
-  .delay-100 { animation-delay: 100ms; }
-  .delay-200 { animation-delay: 200ms; }
-  .delay-300 { animation-delay: 300ms; }
-  .delay-400 { animation-delay: 400ms; }
-  .delay-500 { animation-delay: 500ms; }
-  .delay-600 { animation-delay: 600ms; }
-  .delay-700 { animation-delay: 700ms; }
-  .delay-800 { animation-delay: 800ms; }
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+
+  .delay-800 {
+    animation-delay: 800ms;
+  }
 
   /* Initial State for Animations */
   .opacity-0-initial {
@@ -260,6 +290,29 @@
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--primary-glow));
   }
+
+  /* Hide scrollbar for horizontal scroll on mobile */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Mobile-specific utilities */
+  @media (max-width: 640px) {
+    .mobile-px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .mobile-py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
 }
 
 /* Keyframe Animations */
@@ -268,6 +321,7 @@
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -275,8 +329,13 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideInLeft {
@@ -284,6 +343,7 @@
     opacity: 0;
     transform: translateX(-60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -295,6 +355,7 @@
     opacity: 0;
     transform: translateX(60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -306,6 +367,7 @@
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -313,9 +375,12 @@
 }
 
 @keyframes glowPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 30px hsl(350 70% 35% / 0.3);
   }
+
   50% {
     box-shadow: 0 0 60px hsl(350 70% 45% / 0.5);
   }
@@ -331,9 +396,9 @@
   .hover-lift {
     @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
   }
-  
+
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-[0_0_20px_rgba(var(--primary),0.5)];
+    @apply transition-all duration-300 hover:shadow-[0_0_20px_rgba(var(--primary), 0.5)];
   }
 
   .text-gradient {
@@ -354,17 +419,15 @@
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(255, 255, 255, 0.2) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      transparent 100%);
   transform: skewX(-25deg);
   transition: 0.5s;
 }
 
 .hover-shine:hover::after {
   left: 125%;
-  transition: 0.7s; 
+  transition: 0.7s;
 }

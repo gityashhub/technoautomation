@@ -54,7 +54,7 @@ const Contact = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden pt-32">
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden pt-24 sm:pt-32">
         <div
           className="absolute inset-0"
           style={{
@@ -66,15 +66,15 @@ const Contact = () => {
         <div className="image-overlay-strong" />
         <div className="absolute inset-0 bg-gradient-radial-primary opacity-40" />
 
-        <div className="relative container mx-auto px-6 py-20">
+        <div className="relative container mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <div className="max-w-4xl">
-            <p className="text-primary tracking-[0.4em] uppercase text-sm mb-6 animate-fade-up opacity-0-initial font-body">
+            <p className="text-primary tracking-[0.3em] sm:tracking-[0.4em] uppercase text-xs sm:text-sm mb-4 sm:mb-6 animate-fade-up opacity-0-initial font-body">
               Get in Touch
             </p>
             <h1 className="text-display-xl animate-fade-up opacity-0-initial delay-100">
               CONTACT US
             </h1>
-            <p className="mt-6 text-xl text-foreground/70 max-w-2xl animate-fade-up opacity-0-initial delay-200 font-body font-light">
+            <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-foreground/70 max-w-2xl animate-fade-up opacity-0-initial delay-200 font-body font-light">
               Let's design your smart space together
             </p>
           </div>
@@ -84,8 +84,8 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="relative py-20">
-        <div className="container mx-auto px-6">
+      <section className="relative py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Contact Info */}
             <div className="lg:col-span-2 space-y-8">
